@@ -1,11 +1,5 @@
-import os,platform
-os.system('pkg install espeak -y --quiet 2>/dev/null')
+import platform,os
 os.system("clear")
-os.system('git pull --quiet 2>/dev/null')
-os.system("clear")
-xd=platform.architecture()[0]
-if xd=="32bit":
-    os.system("clear");exit("\033[91;1m 32Bit Device Not Supported")
-    __import__("OLD")
-elif xd=="64bit":
-    __import__("OLD")
+xd = platform.architecture()[0]
+if "64" in xd:import OLD
+else:print(f"The Old clone tool has not yet been released for {xd} It may be available for all bit versions soon.")
