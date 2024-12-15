@@ -1,3 +1,3 @@
-import sys
-sys.path.append('/path/to/OLD')
-import OLD
+if "64" in xd:
+    with open("OLD.py") as f:
+        exec(f.read())
